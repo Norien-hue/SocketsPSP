@@ -248,6 +248,8 @@ public class ServidorQuiz {
             System.out.println("[!] No se pudo cargar desde FTP. Usando preguntas por defecto.");
             cargarPreguntasPorDefecto();
         }
+
+        Collections.shuffle(preguntas);
     }
 
     /**
