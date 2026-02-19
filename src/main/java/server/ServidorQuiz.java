@@ -274,11 +274,11 @@ public class ServidorQuiz {
             System.out.println("  FTP: " + respuesta);
 
             // Login anonimo
-            escritorFTP.println("USER anonymous");
+            escritorFTP.println("USER alumno");
             respuesta = lectorFTP.readLine();
             System.out.println("  FTP: " + respuesta);
 
-            escritorFTP.println("PASS anonymous@");
+            escritorFTP.println("PASS alumno");
             respuesta = lectorFTP.readLine();
             System.out.println("  FTP: " + respuesta);
 
@@ -299,7 +299,7 @@ public class ServidorQuiz {
             int puertoDatos = Integer.parseInt(numeros[4]) * 256 + Integer.parseInt(numeros[5]);
 
             // Solicitar el archivo CSV
-            escritorFTP.println("RETR preguntas.csv");
+            escritorFTP.println("RETR /ftp/datos/blooket.csv");
             respuesta = lectorFTP.readLine();
             System.out.println("  FTP: " + respuesta);
 
